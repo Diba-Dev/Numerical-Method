@@ -20,6 +20,7 @@ void calculationPart(long double x[], long double& a, long double& b, long doubl
         functionCalculation(x[i], a, b, f, i);
         i++;
     } while (i < 2 || (i < 100 && abs(x[i-1] - x[i-2]) > 1e-9)); 
+    x[i] = (a + b) / 2;
 }
 
 int main() {
@@ -43,6 +44,7 @@ int main() {
         cout << "x[" << i << "] = " << x[i] << endl;
         cout << "f(x[" << i << "]) = " << f[i] << endl;
     }
+    cout<<"Two value are same detected. PROCESS DONE."<<endl;
     cout<<endl<<"IF the code is working well then don't mess with it...";
 
     return 0;
